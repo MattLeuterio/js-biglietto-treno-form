@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Google Fonts stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+        
+    <div class="wrapper">
+        <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
+
+        <div class="dati-input">
+            <div class="row">
+                <div class="col">
+                    <label for="nome">Nome e Cognome</label>
+                    <input id="nome" type="text" 
+                           name="nome"
+                            placeholder="inserisci il tuo nome"
+                    >
+                </div>
+                <div class="col">
+                    <label for="km">Km da percorrere</label>
+                    <input id="km" type="number" min="1" max="300"
+                           name="km"
+                            placeholder="inserisci i Km"
+                    >
+                </div>
+                <div class="col">
+                    <label for="fascia-eta">Fascia d'età</label>
+                    <select name="fascia-eta" id="fascia-eta">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <button class="btn" id="bottoneGenera">Genera</button>
+                <button class="btn" id="bottoneAnnulla">Annulla</button>
+            </div>
+        </div>
+
+        <section id="biglietto" class="hidden">
+            <h2 class="title">Il tuo biglietto</h2>
+
+            <h3>Dettagli passeggeri</h3>
+
+            <div class="contenuti">
+                <div class="nome">
+                    <h2>Nome Passeggero</h2>
+                    <h3 id="nome-passeggero"></h3>
+                </div>
+                <div class="offerta">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Offerta</th>
+                                <th>Carrozza</th>
+                                <th>Codice CP</th>
+                                <th>Costo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span id="offerta-applicata"></span>
+                                </td>
+                                <td>
+                                    <span id="carrozza"></span>
+                                </td>
+                                <td>
+                                    <span id="codice-cp"></span>
+                                </td>
+                                <td>
+                                    <span id="costo"></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

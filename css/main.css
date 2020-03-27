@@ -1,0 +1,21 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+
+/* UTILITY */
+.show {
+    opacity: 1;
+}
+
+.hidden {
+    opacity: 0;
+}
