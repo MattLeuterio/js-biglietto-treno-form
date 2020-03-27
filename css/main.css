@@ -8,14 +8,199 @@
 body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
+    background-color: #f44336;
+}
+
+button {
+    cursor: pointer;
 }
 
 
 /* UTILITY */
 .show {
-    opacity: 1;
+    display:  block;
 }
 
 .hidden {
-    opacity: 0;
+    display: none;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* FORM SECTION */
+.wrapper {
+    max-width: 450px;
+    width: 95%;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 30px;
+    padding: 50px 0 50px;
+}
+
+.wrapper .title__section {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.wrapper h1 {
+    font-size: 150%;
+}
+
+.wrapper h3 {
+    font-size: 100%;
+}
+
+.dati-input .row {
+    align-items: center;
+}
+
+
+.dati-input .row .col {
+    text-align: left;
+    max-width: 350px;
+    width: 90%;
+}
+
+.dati-input .row .col:not(:last-child) label {
+    display: none;
+}
+
+.dati-input .row .col:last-child label {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 90%;
+}
+
+
+.dati-input .row .col input,
+.dati-input .row .col select {
+    /* max-width: 300px; */
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(126, 126, 126);
+    /* text-align: center; */
+}
+
+.btn {
+    /* min-width: 350px; */
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 3px;
+    border: 1px solid transparent;
+    background-color: #c9c9c9;
+    color: #424242;
+    font-size: 70%;
+    font-weight: 400;
+}
+
+#button_section .col:last-child .btn {
+    background-color: #bf1408;
+    color: #fff;
+    font-size: 70%;
+}
+
+button:focus,
+input:focus,
+select:focus {
+    outline: transparent;
+}
+
+
+/* TICKET SECTION */
+
+#biglietto {
+    margin: 30px auto;
+    padding: 50px 10px;
+    background: #e4e4e4;
+    border-radius: 20px;
+    max-width: 350px;
+    width: 90%;
+}
+
+
+#biglietto .title {
+    text-align: center;
+    font-size: 200%;
+    font-weight: 100;
+}
+
+#biglietto h4 {
+    padding: 10px;
+    text-align: center;
+    font-size: 70%;
+    font-weight: 400;
+    border-bottom: 1px solid #f44336;
+    color: #f44336;
+    margin: 0 50px;
+}
+
+.contenuti .nome {
+    padding: 10px;
+    text-align: center;
+}
+
+.contenuti .nome h2 {
+    font-size: 90%;
+    font-weight: 400;
+}
+
+.contenuti .nome h3 {
+   padding: 20px;
+   font-size: 150%;
+   color: #f44336;
+}
+
+.offerta {
+    
+}
+
+.offerta h2 {
+    font-size: 90%;
+    font-weight: 400;
+}
+
+.offerta h3 {
+    font-size: 100%;
+    padding: 5px;
+    background: #f44336;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.offerta__dati-treno {
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.offerta__prezzo {
+    justify-content: space-around;
+    text-align: center;
+}
+
+.dati-treno__carrozza,
+.dati-treno__codiceCp,
+.prezzo__sconto,
+.prezzo__totale {
+    flex-basis: 100px;
+}
+
+#biglietto button {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 70%;
+    background-color: #bf1408;
+    color: #fff;
 }

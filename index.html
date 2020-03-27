@@ -10,24 +10,27 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-        
-    <div class="wrapper">
-        <h1 class="title">Calcola il prezzo del tuo biglietto</h1>
 
+    <div class="wrapper">
+        <div class="title__section">
+            <h1 class="title">Compila</h1>
+            <h3>Compila per calcolare il prezzo del tuo biglietto.</h3>
+        </div>
+        
         <div class="dati-input">
-            <div class="row">
+            <div class="row u-flexColumn">
                 <div class="col">
                     <label for="nome">Nome e Cognome</label>
                     <input id="nome" type="text" 
                            name="nome"
-                            placeholder="inserisci il tuo nome"
+                           placeholder="inserisci il tuo nome e cognome"
                     >
                 </div>
                 <div class="col">
                     <label for="km">Km da percorrere</label>
                     <input id="km" type="number" min="1" max="300"
                            name="km"
-                            placeholder="inserisci i Km"
+                            placeholder="inserisci i Km da percorrere"
                     >
                 </div>
                 <div class="col">
@@ -40,52 +43,57 @@
                 </div>
             </div>
 
-            <div class="row">
-                <button class="btn" id="bottoneGenera">Genera</button>
-                <button class="btn" id="bottoneAnnulla">Annulla</button>
+            <div id="button_section" class="row u-flexColumn">
+                <div class="col">
+                    <button class="btn" id="bottoneGenera">Genera</button>
+                </div>
+                <div class="col">
+                    <button class="btn" id="bottoneAnnulla">Annulla</button>
+                </div>
+                       
             </div>
         </div>
 
-        <section id="biglietto" class="hidden">
-            <h2 class="title">Il tuo biglietto</h2>
-
-            <h3>Dettagli passeggeri</h3>
-
-            <div class="contenuti">
-                <div class="nome">
-                    <h2>Nome Passeggero</h2>
-                    <h3 id="nome-passeggero"></h3>
+        <div id="wrapper__biglietto" class="u-flexColumn">
+            <section id="biglietto" class="hidden">
+                
+                <h2 class="title">BIGLIETTO</h2>
+    
+                <h4>Dettagli passeggero</h4>
+    
+                <div class="contenuti">
+                    <div class="nome">
+                        <h2>Nome Passeggero</h2>
+                        <h3 id="nome-passeggero"></h3>
+                    </div>
+                    <div class="offerta u-flexColumn">                      
+                        <div class="offerta__dati-treno u-flex">
+                            <div class="dati-treno__carrozza">
+                                <h2>Carrozza</h2>
+                                <h3 id="carrozza"></h3>
+                            </div>
+                            <div class="dati-treno__codiceCp">
+                                <h2>Codice CP</h2>
+                                <h3 id="codice-cp"></h3>
+                            </div>
+                        </div>
+                        <div class="offerta__prezzo u-flex">
+                            <div class="prezzo__sconto">
+                                <h2>Offerta</h2>
+                                <h3 id="offerta-applicata"></h3>
+                            </div>
+                            <div class="prezzo__totale">
+                                <h2>Costo</h2>
+                                <h3 id="costo"></h3>
+                            </div>
+                        </div>                        
+                    </div>
                 </div>
-                <div class="offerta">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Offerta</th>
-                                <th>Carrozza</th>
-                                <th>Codice CP</th>
-                                <th>Costo</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <span id="offerta-applicata"></span>
-                                </td>
-                                <td>
-                                    <span id="carrozza"></span>
-                                </td>
-                                <td>
-                                    <span id="codice-cp"></span>
-                                </td>
-                                <td>
-                                    <span id="costo"></span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+
+                <button class="btn" onclick="printTicket()">Stampa il tuo biglietto</button>
+            </section>        
+        </div>
+       
     </div>
 
     <!-- JS -->

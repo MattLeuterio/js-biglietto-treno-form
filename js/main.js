@@ -31,17 +31,17 @@ bottoneGenera.addEventListener('click',
         // Calcolo biglietto
         var prezzoKm = 0.21;
         var costoBiglietto = prezzoKm * kmDaPercorrere;
-        var offerta = 'Biglietto Standard';
+        var offerta = 'Standard';
 
         // Calcoliamo il costo e l'offerta applicata
         if (fasciaEta == 'minorenne') {
             // 20% sconto
             costoBiglietto -= costoBiglietto * 0.2;
-            offerta = 'Sconto minorenne';
+            offerta = 'Sconto 20%';
         } else if (fasciaEta == 'over65') {
             //40% sconto
             costoBiglietto -= costoBiglietto * 0.4;
-            offerta = 'Sconto Over 65';
+            offerta = 'Sconto 40%';
         }
 
         // Controllo dei decimali
@@ -86,6 +86,11 @@ bottoneAnnulla.addEventListener('click',
     }
 );
 
+// Stampa Biglietto 
+
+function printTicket() {
+    window.print();
+  }
 
 
 
