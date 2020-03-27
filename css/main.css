@@ -41,7 +41,7 @@ button {
     width: 95%;
     margin: 30px auto;
     background: #fff;
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 50px 0 50px;
 }
 
@@ -106,7 +106,7 @@ button {
 }
 
 #button_section .col:last-child .btn {
-    background-color: #bf1408;
+    background-color: #f44336;
     color: #fff;
     font-size: 70%;
 }
@@ -201,6 +201,6 @@ select:focus {
     margin-top: 50px;
     margin-left: 50px;
     width: 70%;
-    background-color: #bf1408;
+    background-color: #f44336;
     color: #fff;
 }
